@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Multiplayer Platform Game</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Poppins',sans-serif;
+overflow:hidden;
+background:#060816;
+color:white;
+width:100vw;
+height:100vh;
+}
+#game{
+position:relative;
+width:100vw;
+height:100vh;
+background:linear-gradient(180deg,#111936,#050816);
+}
+.topbar{
+position:absolute;
+top:15px;
+left:15px;
+right:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:10;
+}
+.card{
+background:rgba(15,20,40,0.85);
+padding:12px 18px;
+border-radius:18px;
+backdrop-filter:blur(12px);
+box-shadow:0 0 20px rgba(0,0,0,0.35);
+}
+.menu{
+position:absolute;
+left:20px;
+top:100px;
+width:320px;
+background:rgba(15,20,40,0.82);
+border-radius:24px;
+padding:20px;
+backdrop-filter:blur(12px);
+}
+.logo{
+font-size:34px;
+font-weight:700;
+background:linear-gradient(90deg,#60a5fa,#d946ef);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+}
+.btn{
+width:100%;
+padding:16px;
+margin-top:14px;
+border:none;
+border-radius:18px;
+font-size:18px;
+font-weight:700;
+background:linear-gradient(90deg,#ffb300,#ff6f00);
+color:white;
+box-shadow:0 0 25px rgba(255,170,0,0.4);
+}
+.scene{
+position:absolute;
+inset:0;
+background:url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=1600&auto=format&fit=crop') center/cover;
+opacity:0.3;
+}
+.platform{
+position:absolute;
+height:28px;
+background:linear-gradient(90deg,#7c3aed,#2563eb);
+border-radius:20px;
+box-shadow:0 0 24px rgba(99,102,241,0.6);
+}
+.p1{width:500px;bottom:180px;left:50%;transform:translateX(-50%)}
+.p2{width:240px;bottom:340px;left:180px}
+.p3{width:240px;bottom:420px;right:180px}
+.character{
+position:absolute;
+width:100px;
+height:130px;
+bottom:210px;
+left:48%;
+background:linear-gradient(180deg,#3b82f6,#9333ea);
+border-radius:28px;
+box-shadow:0 0 40px rgba(99,102,241,0.7);
+animation:float 2s infinite ease-in-out;
+}
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+.joystick{
+position:absolute;
+bottom:30px;
+left:30px;
+width:120px;
+height:120px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+}
+.jump{
+position:absolute;
+bottom:40px;
+right:40px;
+width:110px;
+height:110px;
+border-radius:50%;
+background:linear-gradient(180deg,#ff9800,#ff5722);
+box-shadow:0 0 30px rgba(255,120,0,0.5);
+}
+</style>
+</head>
+<body>
+<div id="game">
+<div class="scene"></div>
+<div class="topbar">
+<div class="card">Coins: 12,450</div>
+<div class="card">Players: 5/5</div>
+<div class="card">Ping: 28ms</div>
+</div>
+<div class="menu">
+<div class="logo">MULTIPLAYER PLATFORM GAME</div>
+<button class="btn">PLAY</button>
+<button class="btn">SHOP</button>
+<button class="btn">LEADERBOARD</button>
+<button class="btn">SETTINGS</button>
+</div>
+<div class="platform p1"></div>
+<div class="platform p2"></div>
+<div class="platform p3"></div>
+<div class="character"></div>
+<div class="joystick"></div>
+<div class="jump"></div>
+</div>
+</body>
+</html>
