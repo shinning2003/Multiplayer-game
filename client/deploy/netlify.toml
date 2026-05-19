@@ -1,0 +1,7 @@
+[build]
+publish = "client"
+
+[[redirects]]
+from = "/*"
+to = "/app/main-app.html"
+status = 200
