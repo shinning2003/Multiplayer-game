@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplayer Platform Game</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+margin:0;
+overflow:hidden;
+font-family:'Poppins',sans-serif;
+background:#090b1a;
+color:white;
+}
+.background{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(180deg,#101a44,#090b1a);
+}
+.city{
+position:absolute;
+bottom:0;
+width:100%;
+height:55%;
+background:url('https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1600&auto=format&fit=crop') center/cover;
+opacity:0.35;
+}
+.panel{
+position:absolute;
+left:20px;
+top:20px;
+width:300px;
+background:rgba(15,20,40,0.85);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:24px;
+padding:20px;
+backdrop-filter:blur(14px);
+box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+.logo{
+font-size:34px;
+font-weight:700;
+line-height:1;
+background:linear-gradient(90deg,#64b5ff,#ff4fd8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+}
+.player-list div{
+padding:12px;
+margin-top:10px;
+background:rgba(255,255,255,0.06);
+border-radius:14px;
+display:flex;
+justify-content:space-between;
+}
+.play-btn{
+margin-top:20px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:18px;
+font-size:22px;
+font-weight:700;
+background:linear-gradient(90deg,#ffb300,#ff6f00);
+color:white;
+box-shadow:0 0 25px rgba(255,170,0,0.45);
+}
+.characters{
+position:absolute;
+bottom:80px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:60px;
+}
+.character{
+width:130px;
+height:180px;
+border-radius:24px;
+background:linear-gradient(180deg,#2f5cff,#7b1fff);
+box-shadow:0 0 40px rgba(123,31,255,0.5);
+animation:float 2s infinite ease-in-out;
+}
+.character:nth-child(2){
+background:linear-gradient(180deg,#00c853,#00b0ff);
+}
+.character:nth-child(3){
+background:linear-gradient(180deg,#ff1744,#ff9100);
+}
+@keyframes float{
+0%{transform:translateY(0px)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0px)}
+}
+.topbar{
+position:absolute;
+top:20px;
+right:20px;
+display:flex;
+gap:12px;
+}
+.card{
+background:rgba(15,20,40,0.85);
+padding:12px 18px;
+border-radius:16px;
+font-weight:600;
+}
+</style>
+</head>
+<body>
+<div class="background"></div>
+<div class="city"></div>
+<div class="panel">
+<div class="logo">MULTIPLAYER PLATFORM GAME</div>
+<h3>Lobby</h3>
+<div class="player-list">
+<div><span>SHINNING2003</span><span>READY</span></div>
+<div><span>CLOUDSTRIKER</span><span>READY</span></div>
+<div><span>NIGHTFURY</span><span>READY</span></div>
+<div><span>PIXELPANDA</span><span>READY</span></div>
+</div>
+<button class="play-btn">START MATCH</button>
+</div>
+<div class="topbar">
+<div class="card">Coins: 12,450</div>
+<div class="card">Level 23</div>
+<div class="card">Ping 28ms</div>
+</div>
+<div class="characters">
+<div class="character"></div>
+<div class="character"></div>
+<div class="character"></div>
+</div>
+</body>
+</html>
