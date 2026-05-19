@@ -1,0 +1,24 @@
+{
+  "compressionlevel": -1,
+  "height": 20,
+  "width": 60,
+  "tileheight": 64,
+  "tilewidth": 64,
+  "layers": [
+    {
+      "name": "Ground",
+      "type": "tilelayer",
+      "width": 60,
+      "height": 20,
+      "visible": true,
+      "opacity": 1,
+      "data": [1,1,1,1,1,1,1,1,1,1]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "neon-tileset.tsx"
+    }
+  ]
+}
