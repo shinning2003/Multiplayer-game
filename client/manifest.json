@@ -1,0 +1,16 @@
+{
+  "name": "Multiplayer Platform Game",
+  "short_name": "MPGame",
+  "start_url": "/client/index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#111111",
+  "theme_color": "#ff9800",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
